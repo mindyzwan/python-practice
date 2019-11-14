@@ -1,0 +1,16 @@
+def string_to_integer(string):
+	nums = {
+		'1': 1, '2': 2, '3': 3, '4': 4, '5': 5,
+		'6': 6, '7': 7, '8': 8, '9': 9, '0': 0
+	}
+	multiplier = 1
+	integer = 0
+
+	for char in string[::-1]:
+		integer += nums[char] * multiplier
+		multiplier *= 10
+
+	return integer
+
+print(string_to_integer('4321') == 4321)
+print(string_to_integer('570') == 570)
